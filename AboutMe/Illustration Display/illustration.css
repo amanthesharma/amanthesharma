@@ -1,0 +1,32 @@
+/* Typography settings */
+body {
+    font-family: 'Atma', sans-serif;
+    color: #333;
+    background-color: #f5f5f5; /* Or another background color */
+}
+
+/* Header styles */
+header h1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Button and link colors */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindMitra UX Case Study</title>
+  <link rel="stylesheet" href="project3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">MindMitra</div>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#personas">Personas</a></li>
+          <li><a href="#ideation">Ideation</a></li>
+          <li><a href="#wireframes">Wireframes</a></li>
+          <li><a href="#design">Design</a></li>
+          <li><a href="#testing">Testing</a></li>
+          <li><a href="#learnings">Learnings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Introduction -->
+  <section id="intro" class="intro reveal">
+    <div class="container content">
+      <h1>MindMitra</h1>
+      <p>Designing an empathetic mental health support app tailored for Indian college students. Bridging the gap between need and access through research-driven, culturally relevant solutions.</p>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section reveal">
+    <div class="container">
+      <blockquote>"Mental health is not a destination, but a process. It's about how you drive, not where you're going."</blockquote>
+      <footer>— Noam Shpancer</footer>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="reveal">
+    <div class="container section-content">
+      <h2>Research & Insights</h2>
+      <p><strong>Objective:</strong> Understand mental health challenges, barriers, and needs of Indian college students.</p>
+      <div class="grid-2">
+        <div>
+          <h3>Desk Research Highlights</h3>
+          <ul>
+            <li>44.7% of students experience depression; 65.44% report significant stress.</li>
+            <li>Only 10% seek professional help due to stigma and lack of awareness.</li>
+            <li>India has 0.75 psychiatrists per 100,000 people vs. WHO’s recommended 3 per 100,000.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Key User Insights</h3>
+          <ul>
+            <li>Preference for anonymous, digital solutions.</li>
+            <li>Cultural relevance and emotional tone are critical for engagement.</li>
+            <li>Students rely on informal support; professional help seen as last resort.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fact Section -->
+  <section class="quote-section reveal">
+    <div class="container">
+      <blockquote>"One in five college students reports experiencing mental health issues each year, yet fewer than 20% receive treatment."</blockquote>
+      <footer>— National Alliance on Mental Illness (NAMI)</footer>
+    </div>
+  </section>
+
+  <!-- Personas -->
+  <section id="personas" class="reveal">
+    <div class="container section-content">
+      <h2>Personas</h2>
+      <div class="grid-2">
+        <div class="persona">
+          <h3>Rahul Sharma</h3>
+          <p><strong>Age:</strong> 20 | <strong>Stream:</strong> Engineering | <strong>Location:</strong> Delhi</p>
+          <p><strong>Goals & Needs:</strong> Manage exam stress privately, avoid judgment, quick stress relief tools.</p>
+          <p><strong>Frustrations:</strong> Fear of stigma, limited awareness of campus counseling.</p>
+        </div>
+        <div class="persona">
+          <h3>Priya Menon</h3>
+          <p><strong>Age:</strong> 22 | <strong>Stream:</strong> Arts | <strong>Location:</strong> Bangalore</p>
+          <p><strong>Goals & Needs:</strong> Find community support, build confidence, learn coping strategies.</p>
+          <p><strong>Frustrations:</strong> Social anxiety, feels isolated, overwhelmed by peer pressure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section reveal">
+    <div class="container">
+      <blockquote>"You don't have to control your thoughts; you just have to stop letting them control you."</blockquote>
+      <footer>— Dan Millman</footer>
+    </div>
+  </section>
+
+  <!-- Ideation -->
+  <section id="ideation" class="reveal">
+    <div class="container section-content">
+      <h2>Ideation & Features</h2>
+      <p><strong>How Might We...</strong> Help students manage stress without feeling judged?</p>
+      <div class="grid-2">
+        <div class="feature">
+          <h3>Anonymous Onboarding</h3>
+          <p>No personal info required; use emojis for quick personalization.</p>
+        </div>
+        <div class="feature">
+          <h3>Mood & Stress Tracker</h3>
+          <p>Quick mood check-in with emoji scale; AI-driven insights based on trends.</p>
+        </div>
+        <div class="feature">
+          <h3>Emotional Wellness Content</h3>
+          <p>Short culturally relevant videos/articles, available in regional languages.</p>
+        </div>
+        <div class="feature">
+          <h3>Peer & Expert Support</h3>
+          <p>Anonymous forums and optional chat with counselors.</p>
+        </div>
+        <div class="feature">
+          <h3>Immediate Crisis Assistance</h3>
+          <p>One-tap access to helplines and emergency contacts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fact Section -->
+  <section class="quote-section reveal">
+    <div class="container">
+      <blockquote>"Early intervention can make a significant difference: students who seek help early report 50% fewer academic disruptions."</blockquote>
+      <footer>— Journal of American College Health</footer>
+    </div>
+  </section>
+
+  
+<!-- User Journey Map -->
+<section id="userjourney" class="reveal">
+  <div class="container section-content">
+    <h2>User Journey Map</h2>
+    <p>Visual representation of the steps a student takes when using MindMitra to manage their mental health journey.</p>
+
+    <!-- NOTE: No extra padding/margins around this container -->
+    <div class="full-image-container">
+      <img 
+        src="images/mindmitra_user_flows.png" 
+        alt="User Journey Map" 
+        class="full-image" 
+      />
+    </div>
+  </div>
+</section>
+
+  <!-- Wireframes -->
+  <section id="wireframes" class="reveal">
+    <div class="container section-content">
+      <h2>Wireframes</h2>
+      <p>Low-fidelity sketches showcasing key user flows.</p>
+      <div class="image-grid">
+        <img src="images/w1.png" alt="Wireframe 1" class="wireframe-img" />
+        <img src="images/w2.png" alt="Wireframe 2" class="wireframe-img" />
+        <img src="images/w3.png" alt="Wireframe 3" class="wireframe-img" />
+        <img src="images/w4.png" alt="Wireframe 4" class="wireframe-img" />
+        <img src="images/w5.png" alt="Wireframe 5" class="wireframe-img" />
+        <img src="images/w6.png" alt="Wireframe 6" class="wireframe-img" />
+        <img src="images/w7.png" alt="Wireframe 7" class="wireframe-img" />
+        <img src="images/w8.png" alt="Wireframe 8" class="wireframe-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Design -->
+  <section id="design" class="reveal">
+    <div class="container section-content">
+      <h2>Visual Design & UI</h2>
+      <p>Color Palette & Typography</p>
+      <div class="grid-2">
+        <div>
+          <h3>Colors</h3>
+          <ul>
+            <li><span style="color: var(--primary-color);">■ Primary: #4a90e2</span></li>
+            <li><span style="color: var(--secondary-color);">■ Secondary: #50e3c2</span></li>
+            <li><span style="color: var(--accent-color);">■ Accent: #f5a623</span></li>
+            <li><span style="color: #ffffff;">■ Background: #ffffff</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Typography</h3>
+          <p><strong>Montserrat</strong> for headings (400 & 600 weights)</p>
+          <p><strong>Comfortaa</strong> for body text (300 & 400 weights)</p>
+        </div>
+      </div>
+      <h3>High-Fidelity Mockups</h3>
+      <div class="image-grid">
+        <img src="images/h1.png" alt="Mockup 1" class="mockup-img" />
+        <img src="images/h2.png" alt="Mockup 2" class="mockup-img" />
+        <img src="images/h3.png" alt="Mockup 3" class="mockup-img" />
+        <img src="images/h4.png" alt="Mockup 4" class="mockup-img" />
+        <img src="images/h5.png" alt="Mockup 5" class="mockup-img" />
+        <img src="images/h6.png" alt="Mockup 6" class="mockup-img" />
+        <img src="images/h7.png" alt="Mockup 7" class="mockup-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Testing -->
+  <section id="testing" class="reveal">
+    <div class="container section-content">
+      <h2>Prototype & Usability Testing</h2>
+      <p><strong>Method:</strong> Conducted with 5 students to test navigation, emotional tone, and usability.</p>
+      <ul>
+        <li>Observed confusion with mood tags; simplified UI accordingly.</li>
+        <li>Users felt more comfortable with a prominent "Skip" option in onboarding.</li>
+        <li>Positive feedback on color palette and gentle microinteractions.</li>
+      </ul>
+      <p><strong>Iterations:</strong> Improved button sizes, added tooltips, reduced text density.</p>
+    </div>
+  </section>
+
+  <!-- Learnings -->
+  <section id="learnings" class="reveal">
+    <div class="container section-content">
+      <h2>Key Learnings & Future Improvements</h2>
+      <ul>
+        <li>Designing for emotional safety requires careful microinteractions and tone.</li>
+        <li>Continuous user feedback is crucial; plan regular usability tests post-launch.</li>
+        <li>Future: Integrate AI-driven chat support, expand language options.</li>
+      </ul>
+      <p><strong>Takeaway:</strong> "Designing with empathy is designing for impact."</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Aman Kumar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="project3.js"></script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+/*──────────────────────────────────────────────────────────────────────────
+  VARIABLES & RESETS
+──────────────────────────────────────────────────────────────────────────*/
+:root {
+    --font: "Helvetica Neue", Arial, sans-serif;
+    --color-bg: #fafafa;
+    --color-contrast: #fff;
+    --color-text: #333;
+    --color-accent: #0077b6;
+    --radius: 8px;
+    --gap: 4rem;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: var(--font);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height:1.6;
+  }
+  .container {
+    max-width:900px;
+    margin:0 auto;
+    padding:0 1rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    HEADER
+  ──────────────────────────────────────────────────────────────────────────*/
+  .site-header {
+    background:#fff;
+    box-shadow:0 2px 4px rgba(0,0,0,.05);
+  }
+  .header-inner {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem 0;
+  }
+  .logo {
+    font-size:1.5rem;
+    font-weight:300;
+    text-decoration:none;
+    color:var(--color-text);
+  }
+  .nav a {
+    margin-left:1rem;
+    color:var(--color-text);
+    font-weight:300;
+    text-decoration:none;
+    transition:color .3s;
+  }
+  .nav a:hover { color:var(--color-accent); }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    SECTION SPACING
+  ──────────────────────────────────────────────────────────────────────────*/
+  section { padding: var(--gap) 0; }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    HERO
+  ──────────────────────────────────────────────────────────────────────────*/
+ .hero {
+  position: relative;
+  overflow: hidden;            /* keep children contained */
+}
+
+.hero__inner {
+  position: relative;          /* for absolutely positioned children */
+}
+
+/* 1) Make sure the poster is visible by default */
+.hero__video {
+  width: 100%;
+  display: block;
+}
+
+/* 2) Position your info on the left (as before) */
+.hero__info {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: opacity .4s ease;
+}
+
+/* 3) Hide the overlay when video’s playing */
+.hero.playing .hero__info {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.hero.playing .hero__info {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* Keep your original .btn.play-btn styling intact */
+.hero__info .btn.play-btn {
+  /* copy in whatever styles you had before */
+  background: #0069ff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* just in case, ensure it’s positioned above the video */
+  position: relative;
+  z-index: 3;
+}
+
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    HEADINGS
+  ──────────────────────────────────────────────────────────────────────────*/
+  h2 {
+    font-size:2rem;
+    margin-bottom:1rem;
+    border-bottom:2px solid var(--color-accent);
+    padding-bottom:.5rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    OVERVIEW GRID
+  ──────────────────────────────────────────────────────────────────────────*/
+  .overview__grid {
+    display:flex;
+    gap:2rem;
+  }
+  .overview__grid > div {
+    flex:1;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    PROBLEM
+  ──────────────────────────────────────────────────────────────────────────*/
+  .problem p {
+    margin-top:1rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    DESIGN PROCESS
+  ──────────────────────────────────────────────────────────────────────────*/
+  .steps__list {
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:1rem;
+  }
+  .steps__list li {
+    background:var(--color-accent);
+    color:#fff;
+    padding:.5rem 1rem;
+    border-radius:var(--radius);
+    text-transform:uppercase;
+    font-size:.85rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    CARDS LAYOUT
+  ──────────────────────────────────────────────────────────────────────────*/
+  .cards {
+    display:flex;
+    gap:2rem;
+    flex-wrap:wrap;
+    margin-top:1.5rem;
+  }
+  .card {
+    background:#fff;
+    padding:1.5rem;
+    border-radius:var(--radius);
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+    flex:1;
+    transition:transform .3s;
+  }
+  .card:hover { transform:translateY(-5px); }
+
+   /*──────────────────────────────────────────────────────────────────────────
+    PERSONA
+  ──────────────────────────────────────────────────────────────────────────*/
+/* STACKED, FULL-WIDTH PERSONA CARDS */
+.persona .cards {
+  display: grid;
+  grid-template-columns: 1fr;      /* one card per row */
+  gap: 3rem;                       /* plenty of breathing room */
+  max-width: 800px;                /* cap how wide they grow */
+  margin: 0 auto;                  /* center the whole block */
+}
+
+.persona__card {
+  width: 100%;                     /* fill the grid cell */
+  max-width: none;                 /* ignore any old max-width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Make the image taller so the card feels big */
+.persona__card img {
+  width: 100%;           /* fill card’s width */
+  height: auto;          /* let height flow to keep aspect ratio */
+  max-height: 400px;     /* cap how tall it can get */
+  object-fit: contain;   /* show the whole image, letterboxed if needed */
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* Text below the image */
+.persona__card p {
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    OBSERVATIONS — CLEAN WHITE
+  ──────────────────────────────────────────────────────────────────────────*/
+  .observations {
+    background:#fff;
+    border-radius:var(--radius);
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+    padding:2rem 0;
+  }
+  .observations .card {
+    background:transparent;
+    box-shadow:none;
+    color:var(--color-text);
+  }
+  .observations .card h3 {
+    margin-bottom:.5rem;
+  }
+  .observations .card ul {
+    list-style:disc inside;
+    margin-top:.5rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    WIREFRAMES
+  ──────────────────────────────────────────────────────────────────────────*/
+  .wireframe-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:1rem;
+    margin-top:1rem;
+  }
+  .wireframe-grid img {
+    width:100%;
+    border-radius:var(--radius);
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    CAROUSEL PROTOTYPE
+  ──────────────────────────────────────────────────────────────────────────*/
+ /* Section wrapper */
+#all-prototypes {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+#all-prototypes h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+  padding-bottom: .5rem;
+}
+
+/* Responsive grid of phone frames */
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Reuse your phone-frame styling */
+.phone-frame {
+  width: 320px;
+  height: 640px;
+  background: #000;
+  border: 16px solid #333;
+  border-radius: 36px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make sure the prototype images never crop */
+.phone-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+  /*──────────────────────────────────────────────────────────────────────────
+    LEARNINGS & CHALLENGES
+  ──────────────────────────────────────────────────────────────────────────*/
+  .learnings-challenges .card ul {
+    list-style:disc inside;
+    margin-top:1rem;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    FUTURE
+  ──────────────────────────────────────────────────────────────────────────*/
+  /* FUTURE SCOPE — match other card layouts */
+.future {
+    /* keep same section padding */
+    padding: var(--gap) 0;
+    background: var(--color-bg);
+  }
+  .future h2 {
+    /* same underline style as other sections */
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: .5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+  }
+  .future .cards {
+    /* reuse the cards flex container */
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .future .card {
+    /* identical card styling used elsewhere */
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    flex: 1;
+    transition: transform .3s;
+  }
+  .future .card:hover {
+    transform: translateY(-5px);
+  }
+  .future .card p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.4;
+  }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    FOOTER
+  ──────────────────────────────────────────────────────────────────────────*/
+  .site-footer {
+    background:#fff;
+    padding:2rem 0;
+    text-align:center;
+  }
+  .social-icons a {
+    margin:0 .5rem;
+    color:var(--color-text);
+    font-size:1.5rem;
+    transition:color .3s;
+  }
+  .social-icons a:hover { color:var(--color-accent); }
+  
+  /*──────────────────────────────────────────────────────────────────────────
+    RESPONSIVE
+  ──────────────────────────────────────────────────────────────────────────*/
+  @media(max-width:768px){
+    .overview__grid, .cards { flex-direction:column; }
+    .hero__inner { flex-direction:column; }
+    .steps__list { justify-content:center; }
+  }
+
+
+
+  /* make parent sections relatively positioned */
+section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* container for the snake SVG */
+  .snake-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.2; /* subtle background effect */
+  }
+  
+  /* fill the container with the SVG */
+  .snake-bg svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* animated path */
+  .snake-path {
+    stroke-dasharray: 800;      /* length of dash+gap */
+    stroke-dashoffset: 800;     /* start fully hidden */
+    animation: snake 8s linear infinite;
+  }
+  
+  /* keyframes to draw the dash then reset */
+  @keyframes snake {
+    0%   { stroke-dashoffset: 800; }
+    50%  { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -800; }
+  }
+
+  

@@ -1,0 +1,246 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Atma', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20%;
+    background-color: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+header .nav-links a {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #ffdd57;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20%;
+    text-align: left;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Image Centering */
+.image-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.about-image {
+    display: inline-block;
+    width: 100%;
+    max-width: 900px; /* Increased max-width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-representation {
+    background-color: #fcf39b; /* Light yellow background */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.skills-representation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 48%;
+}
+
+.skills-representation ul li {
+    font-size: 1rem;
+    color: #272727;
+    margin: 5px 0;
+}
+
+.skills-representation ul li::before {
+    content: "•";
+    margin-right: 10px;
+    color: #a38d33; /* Accent color for bullets */
+}
+
+.my-values {
+    padding: 40px 10%;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: left;
+    background-color: rgb(205, 255, 170);
+}
+
+.my-values h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.my-values ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.my-values ul li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #555;
+}
+
+.my-values ul li strong {
+    color: #333;
+}
+
+
+/* Skills Section */
+.skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.skill-box {
+    width: 22%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.skill-box p {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+/* Social Links */
+.social-icons a {
+    margin: 0 20px;
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffdd57;
+}
+
+/* Connect Section Styles */
+.connect {
+    text-align: center;
+    padding: 100px 20%;
+    background-color: transparent;
+    color: black;
+}
+
+.connect .social-icons a {
+    margin: 0 20px;
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.connect .social-icons a:hover {
+    color: #ffdd57;
+}
+
+/* Responsive Design */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        z-index: 9;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    header .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ddd;
+    }
+
+    .intro h1, .intro h2 {
+        font-size: 2rem;
+    }
+
+    .intro .about-text {
+        font-size: 0.9rem;
+    }
+}
+

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>SehatSathi Case Study — Aman Kumar</title>
+      
+        <!-- FontAwesome -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+      
+        <!-- Your main layout styles (if any) -->
+        <link rel="stylesheet" href="/style.css" />
+      
+        <!-- Your case-study–specific styles -->
+        <link rel="stylesheet" href="project1.css" />
+
+        
+      
+        <!-- Your JS (deferred so DOM exists) -->
+        
+      </head>
+      
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- <a href="/index.html" class="logo">aman</a> -->
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/AboutMe/about.html">About</a>
+        <a href="#">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / INTRO VIDEO -->
+  <section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__info">
+      <h1>SehatSathi</h1>
+      <p>Duration: 3 Months   |   Role: UX Designer</p>
+      <button class="btn play-btn">▶ Play</button>
+    </div>
+    <video
+      id="intro-video"
+      class="hero__video"
+      muted
+      poster="/Banner1.png"
+      preload="metadata"
+    >
+      <source src="Wada PAo.mp4" type="video/mp4" />
+      Your browser doesn’t support video.
+    </video>
+  </div>
+</section>
+
+
+  <!-- OVERVIEW -->
+  <section class="overview">
+    <div class="snake-bg">
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path
+            class="snake-path"
+            d="M0,100 C150,0 300,200 450,100 S600,100 650,50"
+            fill="none"
+            stroke="#4caf50"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+
+      
+      
+    <div class="container">
+      <h2>Project Overview</h2>
+      <div class="overview__grid">
+        <div>
+          <h3>Context and Motivation</h3>
+          <p>
+           Healthcare accessibility in public hospitals, particularly for underserved communities, remains challenging. My firsthand experience at AIIMS Patna revealed significant issues like poor signage, inadequate communication, and cumbersome manual processes. This inspired SehatSathi—a UX-driven initiative to create a more accessible, efficient, and transparent hospital experience.
+
+          </p>
+        </div>
+        <div>
+          <h3>Project Summary</h3>
+          <p>
+            SehatSathi is a user-centric digital platform aimed at transforming patient and caregiver experiences in public healthcare settings. Leveraging thorough UX research and iterative design, the app provides clear hospital navigation, real-time patient updates, streamlined communication, and AI-supported features.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM STATEMENT -->
+  <section class="problem">
+    
+    <div class="container">
+      <h2>Problem Statement</h2>
+      <p>
+        Patients and families at public hospitals face difficulties due to inadequate information, confusing navigation, lack of real-time communication, and burdensome manual processes. These challenges significantly impact patient care and satisfaction, especially during critical emergencies.
+
+      </p>
+    </div>
+  </section>
+
+  <!-- DESIGN PROCESS -->
+  <section class="steps">
+    <div class="container">
+      <h2>Design Process</h2>
+      <ol class="steps__list">
+        <li>Empathize</li>
+        <li>Define</li>
+        <li>Ideate</li>
+        <li>Prototype</li>
+        <li>Test</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <div class="container">
+      <h2>Research</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Research Goals</h3>
+          <ul>
+            <li>Understand the main challenges faced by patients, families, and staff.</li>
+    <li>Identify communication and navigation gaps.</li>
+    <li>Determine essential features that would meaningfully improve user experience.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Methods Used</h3>
+  <ul>
+    <li>Conducted 10 in-depth user interviews (patients, caregivers, hospital staff).</li>
+    <li>Collected over 50 user surveys.</li>
+    <li>Observed hospital processes and patient interactions at AIIMS Patna.</li>
+    <li>Performed competitive analysis of existing healthcare solutions.</li>
+  </ul>
+        </div>
+        <div class="card">
+          <h3>Key Findings</h3>
+  <ul>
+    <li>75% of users felt overwhelmed by hospital navigation.</li>
+    <li>65% preferred real-time updates on patient status.</li>
+    <li>Long waiting times due to manual processes increased user frustration.</li>
+    <li>Staff expressed the need for digital tools to manage patient queries effectively.</li>
+  </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- PERSONA -->
+  <section class="persona">
+    
+    <div class="container">
+      <h2>Personas</h2>
+      <div class="cards">
+        <div class="card persona__card">
+          <img src="images/Persona1.png" alt="Caregiver Persona" />
+        </div>
+        <div class="card persona__card">
+          <img src="images/Persona2.png" alt="Patient Persona" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBSERVATION STUDIES -->
+  <section class="observations">
+    <div class="snake-bg">
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path
+            class="snake-path"
+            d="M0,100 C150,0 300,200 450,100 S600,100 650,50"
+            fill="none"
+            stroke="#4caf50"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+      <!-- your normal content goes here -->
+
+      
+    <div class="container">
+      <h2>Observation Insights</h2>
+      <div class="cards">
+        <div class="card">
+          <ul>
+    <li>Users frequently asked staff for directions due to poor signage.</li>
+    <li>Families experienced anxiety waiting for updates on their loved ones.</li>
+    <li>Manual paperwork and multiple counters caused operational inefficiencies.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SURVEY INSIGHTS -->
+  <section class="insights">
+    <div class="snake-bg">
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path
+            class="snake-path"
+            d="M0,100 C150,0 300,200 450,100 S600,100 650,50"
+            fill="none"
+            stroke="#4caf50"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+      <!-- your normal content goes here -->
+      
+      
+    <div class="container">
+      <h2>Survey Insights</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Families Need Updates</h3>
+          <p>Critical to reduce anxiety and confusion.</p>
+        </div>
+        <div class="card">
+          <h3>Manual Processes Stall</h3>
+          <p>Online check-in and notifications improve flow.</p>
+        </div>
+        <div class="card">
+          <h3>Better Signage</h3>
+          <p>Clear wayfinding eases stress and navigation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- IDEATION -->
+  <section class="ideation">
+    <div class="container">
+      <h2>Ideation & Solutions</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Ideation Process</h3>
+          <ul>
+          <li> Brainstormed solutions based on research findings.</li>
+          <li>Evaluated feasibility and user impact.</li>
+          <li>Prioritized high-impact, low-effort solutions.</li></ul>
+        </div>
+        <div class="card">
+          <h3>Top Solutions</h3>
+          <ol>
+          <li>Real-Time Patient Update Dashboard:** Immediate patient status, medical test results, and treatment information.</li>
+          <li>Interactive Hospital Navigation:** Easy-to-follow digital maps and clear directions.</li>
+          <li>Emergency Support Features:** Quick assistance during emergencies.</li>
+        <li>AI-Powered Chatbot:** Automated support and multilingual assistance.</li></ol>
+        </div>
+        <div class="card">
+          <h3>Better Signage</h3>
+          <p>Clear wayfinding eases stress and navigation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WIREFRAMES -->
+  <section class="wireframes">
+    <div class="container">
+      <h2>Wireframes</h2>
+      <div class="wireframe-grid">
+        <img src="images/W1.png" alt="" />
+        <img src="images/W2.png" alt="" />
+        <img src="images/W5.png" alt="" />
+        <img src="images/W6.png" alt="" />
+        <img src="images/W7.png" alt="" />
+        <img src="images/W8.png" alt="" />
+        <img src="images/W9.png" alt="" />
+        <img src="images/W11.png" alt="" />
+        <img src="images/W12.png" alt="" />
+        <img src="images/111111.png" alt="" />
+        <img src="images/444444.png" alt="" />
+        <img src="images/W13.png" alt="" />
+        <img src="images/W14.png" alt="" />
+        <img src="images/W15.png" alt="" />
+        <img src="images/W16.png" alt="" />
+        <img src="images/W17.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- HI-FI PROTOTYPE -->
+  <section class="hi-fi">
+    <div class="snake-bg">
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path
+            class="snake-path"
+            d="M0,100 C150,0 300,200 450,100 S600,100 650,50"
+            fill="none"
+            stroke="#4caf50"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+      <!-- your normal content goes here -->
+      
+   <section id="all-prototypes">
+  <h2>Hi-Fi Prototype Screens</h2>
+  <div class="screens-grid">
+    <div class="phone-frame"><img src="images/image1.png" alt="Prototype 1"></div>
+    <div class="phone-frame"><img src="images/image2.png" alt="Prototype 2"></div>
+    <div class="phone-frame"><img src="images/image3.png" alt="Prototype 3"></div>
+    <div class="phone-frame"><img src="images/image4.png" alt="Prototype 4"></div>
+    <div class="phone-frame"><img src="images/image5.png" alt="Prototype 5"></div>
+    <div class="phone-frame"><img src="images/image6.png" alt="Prototype 6"></div>
+    <div class="phone-frame"><img src="images/image7.png" alt="Prototype 7"></div>
+    <div class="phone-frame"><img src="images/image8.png" alt="Prototype 8"></div>
+  </div>
+</section> 
+
+
+
+
+  <!-- USER JOURNEY MAP -->
+  <section class="persona">
+    
+    <div class="container">
+      <h2>User Journey Map</h2>
+      <div class="cards">
+        <div class="card persona__card">
+          <img src="images/UJM2.jpg" alt="Caregiver Persona" />
+        </div>
+        <div class="card persona__card">
+          <img src="images/UJM1.jpg" alt="Patient Persona" />
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Impacy & Metric -->
+  <section class="insights">
+    <div class="snake-bg">
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path
+            class="snake-path"
+            d="M0,100 C150,0 300,200 450,100 S600,100 650,50"
+            fill="none"
+            stroke="#4caf50"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+      
+      
+    <div class="container">
+      <h2>Impact & Metrics</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Anticipated 30% reduction in waiting times.</h3>
+          
+        </div>
+        <div class="card">
+          <h3>Projected 50% improvement in patient and caregiver satisfaction.</h3>
+         
+        </div>
+        <div class="card">
+          <h3>Expected substantial decrease in staff workload through digital process automation.</h3>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNINGS & CHALLENGES -->
+  <section class="learnings-challenges">
+    <div class="container cards">
+      <div class="card">
+        <h2>Learnings</h2>
+        <ul>
+          <li>Real-world research is unpredictable</li>
+          <li>Empathy is at the heart of UX</li>
+          <li>Problem framing is critical</li>
+          <li>AI in UX isn't just a buzzword</li>
+          <li>Designing for accessibility means clarity</li>
+          
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Challenges</h2>
+        <ul>
+          <li>Navigating a chaotic environment</li>
+          <li>Gathering reliable user input</li>
+          <li>Scope creep</li>
+          <li>Language & digital literacy barriers</li>
+          <li>Prioritizing features without bias</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="future">
+    <div class="container">
+      <h2>Future Scope</h2>
+      <div class="cards">
+        <div class="card">
+          <p><strong>Next Steps:</strong> Scaling with AI-driven personalization and real-time insights.</p>
+        </div>
+        <div class="card">
+          <p><strong>Vision:</strong> Enabling seamless, adaptive experiences nationwide.</p>
+        </div>
+        <div class="card">
+          <p><strong>Innovation:</strong> Integrating voice-assisted wayfinding for accessibility.</p>
+        </div>
+        <div class="card">
+          <p><strong>Collaboration:</strong> Partnering with hospitals and stakeholders for deeper impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools and Skills -->
+  <section class="observations">
+    <div class="snake-bg">
+        <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+          <path
+            class="snake-path"
+            d="M0,100 C150,0 300,200 450,100 S600,100 650,50"
+            fill="none"
+            stroke="#4caf50"
+            stroke-width="4"
+          />
+        </svg>
+      </div>
+      <!-- your normal content goes here -->
+
+      
+    <div class="container">
+      <h2>Tools & Skills Utilized</h2>
+      <div class="cards">
+        <div class="card">
+          <ul>
+    <li>Tools: Figma, Miro, Dovetail, Google Forms, Canva, ChatGPT, UXPilot.ai</li>
+    <li>Skills: UX Research, Prototyping, User-Centric Design, Data Analysis, AI Integration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    
+      
+    <div class="container footer__inner">
+      <h2>Let's Connect</h2>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="project1.js"></script>
+ 
+</body>
+</html>
