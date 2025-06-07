@@ -50,7 +50,22 @@
     transition:color .3s;
   }
   .nav a:hover { color:var(--color-accent); }
-  
+  /* project1.css (or your global style.css) */
+.site-header {
+  position: fixed;      /* take it out of the normal flow */
+  top: 0;               /* stick to the very top */
+  left: 0;
+  width: 100%;          /* span the full viewport width */
+  z-index: 1000;        /* sit above everything else */
+  background: white;    /* match your page background so content doesn’t peek through */
+}
+
+/* bump the page content down so it isn’t hidden under the fixed header */
+body {
+  margin: 0;            /* reset any default body margin */
+  padding-top: 70px;    /* ≈ your header’s height—adjust to match */
+}
+
   /*──────────────────────────────────────────────────────────────────────────
     SECTION SPACING
   ──────────────────────────────────────────────────────────────────────────*/

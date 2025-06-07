@@ -1,31 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Illustration Display</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/AboutMe/Illustration Display/illustration.css"> <!-- Specific styles for illustration page if needed -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman's Calming Portfolio</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f0f2e, #1a1a40);
+      color: #e8e8e8;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* Scrollbar Reset for Horizontal Scroll Sections */
+    ::-webkit-scrollbar {
+      height: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(160, 196, 255, 0.3);
+      border-radius: 4px;
+    }
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15, 15, 46, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #a0c4ff;
+    }
+    header nav a {
+      margin-left: 30px;
+      font-size: 1rem;
+      color: #c0c0c0;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #a0c4ff;
+    }
+    @media (max-width: 768px) {
+      header { padding: 10px 20px; }
+      header .logo { font-size: 1.2rem; }
+      header nav a { margin-left: 20px; font-size: 0.9rem; }
+    }
+    /* Hero Section */
+    #hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      color: #a0c4ff;
+      letter-spacing: 1px;
+    }
+    #hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      color: #c0c0c0;
+      max-width: 600px;
+    }
+    /* Subtle Floating Orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(160, 196, 255, 0.1);
+      animation: floatOrb 20s linear infinite;
+      filter: blur(4px);
+      pointer-events: none;
+    }
+    @keyframes floatOrb {
+      0% { transform: translateY(0) translateX(0) scale(1); }
+      25% { transform: translateY(-20px) translateX(10px) scale(1.1); }
+      50% { transform: translateY(0) translateX(20px) scale(1); }
+      75% { transform: translateY(20px) translateX(10px) scale(0.9); }
+      100% { transform: translateY(0) translateX(0) scale(1); }
+    }
+    /* Panoramic Showcase Section */
+    #panorama {
+      position: relative;
+      margin-top: 100vh; /* Start after hero */
+      padding: 60px 0;
+      background: rgba(26, 26, 48, 0.9);
+    }
+    .panorama-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px 40px;
+    }
+    .panorama-item {
+      flex: none;
+      scroll-snap-align: center;
+      width: 80vw;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    .panorama-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .panorama-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      background: rgba(15, 15, 46, 0.8);
+      color: #e8e8e8;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    @media (max-width: 768px) {
+      .panorama-item { width: 100vw; }
+      .panorama-wrapper { padding: 20px; gap: 10px; }
+      .panorama-caption { font-size: 0.9rem; left: 10px; bottom: 8px; }
+    }
+    /* Gallery Section */
+    #gallery {
+      padding: 100px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      background: rgba(26, 26, 48, 0.9);
+    }
+    .card {
+      position: relative;
+      width: 280px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      transition: opacity 0.5s;
+      display: block;
+    }
+    .card .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(15, 15, 46, 0.8);
+      color: #e8e8e8;
+      font-weight: 400;
+      padding: 12px;
+      text-align: center;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+    .card:hover .caption {
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      #gallery { padding: 60px 20px; gap: 20px; }
+      .card { width: 220px; }
+      .card img { height: 220px; }
+    }
+    /* Footer / Contact */
+    footer {
+      padding: 40px;
+      text-align: center;
+      background: transparent;
+      color: #c0c0c0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #a0c4ff;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      color: #c0c0c0;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header Section (copied from homepage) -->
-    <header>
-        <div class="logo">
-            <h1><a href="index.html">aman</a></h1>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="AboutMe/about.html">About</a>
-            <a href="#">Resume</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">Aman Kumar</div>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="#panorama">Showcase</a>
+      <a href="#gallery">Illustrations</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Main Content for Illustrations -->
-    <section class="gallery">
-        <h2>Illustrations</h2>
-        <!-- Add your illustration images -->
-    </section>
-    <script src="/script.js"></script>
+  <section id="hero">
+    <h1>Art is to looked upon</h1>
+    <p>Immerse yourself in calming illustrations that blend simplicity.</p>
+    <!-- Subtle floating orbs -->
+    <script>
+      const orbCount = 10;
+      for (let i = 0; i < orbCount; i++) {
+        const orb = document.createElement('div');
+        orb.classList.add('orb');
+        const size = Math.random() * 100 + 80;
+        orb.style.width = size + 'px';
+        orb.style.height = size + 'px';
+        orb.style.top = Math.random() * 100 + '%';
+        orb.style.left = Math.random() * 100 + '%';
+        orb.style.animationDelay = Math.random() * 20 + 's';
+        document.body.appendChild(orb);
+      }
+    </script>
+  </section>
+
+  <section id="panorama">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #a0c4ff;">Panoramic Showcase</h2>
+    <div class="panorama-wrapper">
+      <!-- Example panoramic illustration; replace src with actual image paths -->
+      <div class="panorama-item">
+        <img src="images/WallArt.jpg" alt="Hunger Comic Panorama" />
+       <!-- <div class="panorama-caption">"Momo Quest" Illustration</div>-->
+      </div>
+      <div class="panorama-item">
+        <img src="images/WallArt.jpg" alt="Hunger Comic Panorama" />
+       <!-- <div class="panorama-caption">"Momo Quest" Illustration</div>-->
+      </div>
+      <!-- Add more panorama-item blocks for additional wide illustrations -->
+      
+  </section>
+
+  <section id="gallery">
+    <h2 style="text-align: center; margin-bottom: 30px; color: #a0c4ff;">Illustration Gallery</h2>
+    <!-- Replace src with your actual illustration paths -->
+    <div class="card">
+      <img src="images/viratkohli.jpg" alt="Illustration 1" />
+      <!--<div class="caption">Illustration Title 1</div>-->
+    </div>
+    <div class="card">
+      <img src="images/blindgirl.jpg" alt="Illustration 2" />
+      
+    </div>
+    <div class="card">
+      <img src="images/final-potrait.jpg" alt="Illustration 3" />
+      
+    </div>
+    <div class="card">
+      <img src="images/77.jpg" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/5_6114151752792015520.jpg" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/6.jpg" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/final-12.jpg" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/newww-one.png" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/msd.jpg" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/shooting-scene1.jpg" alt="Illustration 4" />
+      
+    </div>
+    <div class="card">
+      <img src="images/final-kam.jpg" alt="Illustration 4" />
+      
+    </div>
+    <!-- Add more .card elements as needed -->
+  </section>
+
+  <footer id="contact">
+    <p>Contact: <a href="mailto:amankrsharma64@gmail.com">amankrsharma64@gmail.com</a> | Connect with me on <a href="https://www.linkedin.com/in/amankumar64">Linkedin</a></p>
+  </footer>
 </body>
-
-
 </html>
