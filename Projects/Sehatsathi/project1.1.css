@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  line-height: 1.5;
+   padding-top: 60px;
+}
+.intro {
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+}
+.intro p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* styles.css */
+/* styles.css */
+
+/* Prevent content from hiding under the fixed navbar */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+/* Left-aligned brand */
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2aa79b;
+}
+
+/* Centered nav list */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+}
+.nav-center li {
+  display: inline-block;
+}
+.nav-center a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2aa79b;
+  padding: 0.5rem 1rem;
+}
+.nav-center a:hover {
+  opacity: 0.8;
+}
+
+/* Ensure your nav-center rules come *after* any global a{} styles */
+
+.nav-center a,
+.nav-center a:visited {
+  text-decoration: none;   /* no underline */
+  color: #2aa79b;           /* same green as AMAN */
+  font-weight: bold;        /* bold text */
+}
+
+.nav-center a:hover,
+.nav-center a:focus {
+  opacity: 0.8;             /* subtle hover effect */
+}
+
+
+
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/Banner.png') center/cover no-repeat;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.25rem;
+}
+
+/* DETAILS */
+.details {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  line-height: 1.6;
+}
+.details h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2e7d32;
+}
+.details p {
+  margin-bottom: 1rem;
+}
+.details p strong {
+  color: #000;
+}
