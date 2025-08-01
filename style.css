@@ -1,4 +1,9 @@
 /* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +16,7 @@ a {
 
 
 body {
-    font-family: 'Atma', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     letter-spacing: 0.5px;
     background-color: white;
